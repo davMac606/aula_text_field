@@ -35,7 +35,7 @@ class _MyTextState extends State<MyText> {
           print(value);
             }, style: TextStyle(
               color: Color.fromARGB(255, 0, 0, 0),
-              fontSize: 20,
+              fontSize: 12,
               fontWeight: FontWeight.bold,
             ), decoration: InputDecoration(
               labelText: 'Digite um número',
@@ -45,14 +45,16 @@ class _MyTextState extends State<MyText> {
             ),
           ),
           TextField(
+            
             controller: cmpTxt1,
             onChanged: (value) {
           print(value);
             }, style: TextStyle(
               color: Color.fromARGB(255, 0, 0, 0),
-              fontSize: 20,
+              fontSize: 12,
               fontWeight: FontWeight.bold,
             ), decoration: InputDecoration(
+            
               labelText: 'Digite outro número',
               filled: true,
               fillColor: Colors.grey[300],
