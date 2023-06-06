@@ -58,8 +58,9 @@ class _MyTextState extends State<MyText> {
               fillColor: Colors.grey[300],
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
             ),
-          ),
-          ElevatedButton(onPressed: () {
+          ), Row(
+            children: [
+ElevatedButton(onPressed: () {
             setState(() {
             
               if (cmpTxt.text.isNotEmpty) {
@@ -123,7 +124,10 @@ class _MyTextState extends State<MyText> {
             result = "";
             resultado = 0;
           }), child: Text('CE')),
-           Text("Você inseriu: $result"),
+            ],
+          ),
+          
+           Text("Seu resultado é: $result"),
             
           ]),)
       );
