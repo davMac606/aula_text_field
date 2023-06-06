@@ -23,12 +23,14 @@ class _MyTextState extends State<MyText> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Text'),
+        title: Text('Calculadora'),
         
       ),
       body: Center(
         child: Column(
         children: [
+           SizedBox(height:15.0),
+
           TextField(
             controller: cmpTxt,
             onChanged: (value) {
@@ -44,6 +46,8 @@ class _MyTextState extends State<MyText> {
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
             ),
           ),
+           SizedBox(height:10.0),
+
           TextField(
             
             controller: cmpTxt1,
@@ -60,7 +64,12 @@ class _MyTextState extends State<MyText> {
               fillColor: Colors.grey[300],
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
             ),
-          ), Row(
+          ),
+          
+           SizedBox(height:15.0),
+           
+           
+            Row(
             children: [
 ElevatedButton(onPressed: () {
             setState(() {
@@ -77,6 +86,7 @@ ElevatedButton(onPressed: () {
               }
             });           
           }, child: Text('+')),
+              SizedBox(width:10.0),
           ElevatedButton(onPressed: (() {
             setState(() {
 
@@ -87,10 +97,11 @@ ElevatedButton(onPressed: () {
               cmpTxt.clear();
               cmpTxt1.clear();
             });
-            
-            
+
+                      
           }), child: Text('-'),),
-          ElevatedButton(onPressed: () {
+              SizedBox(width:10.0),
+            ElevatedButton(onPressed: () {
             setState(() {
 
               if (cmpTxt.text.isNotEmpty) {
@@ -103,8 +114,10 @@ ElevatedButton(onPressed: () {
               } else {
                 result = 'Campo vazio.';
               }
-            });           
+            });     
+
           }, child: Text('x')),
+              SizedBox(width:10.0),
           ElevatedButton(onPressed: () {
    
             setState(() {
@@ -118,8 +131,14 @@ ElevatedButton(onPressed: () {
               } else {
                 result = 'Campo vazio.';
               }
-            });           
+          
+            });        
+
+            
+     
+
           }, child: Text('/')),
+              SizedBox(width:10.0),
           ElevatedButton(onPressed: (() {
             cmpTxt.clear();
             cmpTxt1.clear();
@@ -127,8 +146,9 @@ ElevatedButton(onPressed: () {
             resultado = 0;
           }), child: Text('CE')),
             ],
+            
           ),
-          
+           SizedBox(height:10.0),
            Text("Seu resultado é: $result"),
             
           ]),)
