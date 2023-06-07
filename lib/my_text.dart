@@ -142,7 +142,7 @@ ElevatedButton(onPressed: () {
           ElevatedButton(onPressed: (() {
             cmpTxt.clear();
             cmpTxt1.clear();
-            result = "";
+            result = "$resultado.toStringAsFixed(3)";
             resultado = 0;
           }), child: Text('CE')),
             ],
